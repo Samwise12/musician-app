@@ -12,11 +12,7 @@ router.get('/health', (req, res) => {
 // retrieve all musicians from data store
 router.get('/all', (req, res) => {
   const { musician } = req.app.locals;
-  musician.getMusicians(req.params.id, (err, returnedMusicians) => {
-    if (err) {
-      res.status('400').send({errorMessage: err});
-    }
-    res.status('200').send(returnedMusicians);
+    res.status('200').send("200 - ok");
   });
 });
 
